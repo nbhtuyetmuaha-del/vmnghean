@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-vw-blue: #001e50;
+  --color-vw-light: #00b0f0;
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
