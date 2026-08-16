@@ -67,9 +67,12 @@ export const carModelType = defineType({
     }),
     defineField({
       name: 'gallery',
-      title: 'Thư viện ảnh',
+      title: 'Thư viện ảnh (Kéo & thả nhiều ảnh cùng lúc vào đây)',
       type: 'array',
-      of: [{ type: 'image' }],
+      of: [{ type: 'image', options: { hotspot: true } }],
+      options: {
+        layout: 'grid',
+      },
     }),
     defineField({
       name: 'variants',
