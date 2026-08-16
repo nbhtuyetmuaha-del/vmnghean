@@ -9,6 +9,9 @@ export interface CarModel {
   slogan: string;
   heroImage: string;
   startingPrice: string;
+  lifestyleSubTitle?: string;
+  lifestyleTitle?: string;
+  lifestyleDescription?: string;
   features: Array<{ title: string; description: string; iconName: string }>;
   variants: Variant[];
   specs: {

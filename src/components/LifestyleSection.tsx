@@ -29,10 +29,10 @@ export default function LifestyleSection({ data }: { data: CarModel }) {
           transition={{ duration: 1 }}
         >
           <h2 className="text-3xl md:text-5xl font-light text-slate-300 mb-6 tracking-wide">
-            Kiệt tác vượt thời gian
+            {data.lifestyleSubTitle || 'Kiệt tác vượt thời gian'}
           </h2>
           <h3 className="text-4xl md:text-6xl font-bold text-white uppercase tracking-widest mb-10 drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
-            Đẳng cấp không giới hạn
+            {data.lifestyleTitle || 'Đẳng cấp không giới hạn'}
           </h3>
         </motion.div>
 
@@ -49,11 +49,9 @@ export default function LifestyleSection({ data }: { data: CarModel }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-lg md:text-xl text-slate-400 font-light leading-relaxed px-4 md:px-12"
+          className="text-lg md:text-xl text-slate-400 font-light leading-relaxed px-4 md:px-12 whitespace-pre-line"
         >
-          {data.name} không chỉ là một chiếc xe, đó là bản tuyên ngôn của sự thành đạt. 
-          Sự hòa quyện hoàn hảo giữa nghệ thuật chế tác thủ công tinh xảo và công nghệ kỹ thuật số tương lai. 
-          Mọi giác quan của bạn sẽ được đánh thức ngay từ khoảnh khắc chạm tay vào vô lăng.
+          {data.lifestyleDescription || `${data.name} không chỉ là một chiếc xe, đó là bản tuyên ngôn của sự thành đạt. Sự hòa quyện hoàn hảo giữa nghệ thuật chế tác thủ công tinh xảo và công nghệ kỹ thuật số tương lai. Mọi giác quan của bạn sẽ được đánh thức ngay từ khoảnh khắc chạm tay vào vô lăng.`}
         </motion.p>
       </div>
     </section>

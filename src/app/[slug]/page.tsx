@@ -47,6 +47,9 @@ export default async function CarLandingPage({ params }: { params: Promise<{ slu
     slogan: sanityCar.slogan || landingPageData.carModel.slogan,
     heroImage: safeUrlFor(sanityCar.heroImage, landingPageData.carModel.heroImage),
     startingPrice: sanityCar.startingPrice ?? '',
+    lifestyleSubTitle: sanityCar.lifestyleSubTitle,
+    lifestyleTitle: sanityCar.lifestyleTitle,
+    lifestyleDescription: sanityCar.lifestyleDescription,
     features: (sanityCar.features && Array.isArray(sanityCar.features) && sanityCar.features.length > 0) 
       ? sanityCar.features 
       : landingPageData.carModel.features,

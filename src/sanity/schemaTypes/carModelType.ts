@@ -50,8 +50,26 @@ export const carModelType = defineType({
     }),
     defineField({
       name: 'slogan',
-      title: 'Slogan',
+      title: 'Slogan Hero (Dưới tên xe)',
       type: 'string',
+    }),
+    defineField({
+      name: 'lifestyleSubTitle',
+      title: 'Tiêu đề phụ - Đỉnh Cao Chế Tác (Dòng trên)',
+      type: 'string',
+      description: 'Ví dụ: Kiệt tác vượt thời gian (Bỏ trống sẽ dùng mặc định)',
+    }),
+    defineField({
+      name: 'lifestyleTitle',
+      title: 'Tiêu đề chính - Đỉnh Cao Chế Tác (Dòng to)',
+      type: 'string',
+      description: 'Ví dụ: ĐẮNG CẤP KHÔNG GIỚI HẠN (Bỏ trống sẽ dùng mặc định)',
+    }),
+    defineField({
+      name: 'lifestyleDescription',
+      title: 'Đoạn văn mô tả - Đỉnh Cao Chế Tác',
+      type: 'text',
+      description: 'Đoạn văn mô tả chi tiết câu chuyện/slogan xe (Bỏ trống sẽ dùng văn bản mặc định)',
     }),
     defineField({
       name: 'startingPrice',
