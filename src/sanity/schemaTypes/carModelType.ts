@@ -67,7 +67,8 @@ export const carModelType = defineType({
     }),
     defineField({
       name: 'gallery',
-      title: 'Thư viện ảnh (Kéo & thả nhiều ảnh cùng lúc vào đây)',
+      title: 'Thư viện ảnh',
+      description: '📱 Trên Điện thoại: Bấm nút "+ Add item" ➔ Vào Thư viện ảnh ➔ Tích chọn hoặc nhấn giữ NHIỀU ẢNH cùng lúc để tải lên hàng loạt.',
       type: 'array',
       of: [{ type: 'image', options: { hotspot: true } }],
       options: {
