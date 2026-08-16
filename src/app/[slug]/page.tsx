@@ -11,7 +11,7 @@ import { client } from '@/sanity/lib/client';
 import { safeUrlFor } from '@/sanity/lib/image';
 import { notFound } from 'next/navigation';
 
-export const revalidate = 60; // Tự động cập nhật web sau 60 giây khi có thay đổi
+export const revalidate = 0; // Cập nhật dữ liệu Sanity tức thì (Real-time) ngay khi bấm Publish
 
 export default async function CarLandingPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;

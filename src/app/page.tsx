@@ -2,7 +2,7 @@ import { client } from '@/sanity/lib/client';
 import { safeUrlFor } from '@/sanity/lib/image';
 import DirectoryClient from './DirectoryClient';
 
-export const revalidate = 60;
+export const revalidate = 0; // Cập nhật dữ liệu Sanity tức thì (Real-time) khi vừa bấm Publish
 
 export default async function DirectoryPage() {
   // Lấy tất cả mẫu xe từ Sanity bao gồm trường category
