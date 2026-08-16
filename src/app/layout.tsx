@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { landingPageData } from "@/data/cms";
 import Header from "@/components/Header";
+import Tracking from "@/components/Tracking";
 
 // Sử dụng font Inter cực kỳ hiện đại và dễ đọc
 const inter = Inter({ 
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="vi" className={`${inter.variable} scroll-smooth`}>
       <body className="antialiased bg-slate-950 text-slate-100 selection:bg-blue-500 selection:text-white">
+        <Tracking />
         <Header />
         <main className="pt-16 sm:pt-0">
           {children}

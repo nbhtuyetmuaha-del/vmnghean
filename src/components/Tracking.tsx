@@ -4,8 +4,8 @@ import Script from 'next/script';
 
 export default function Tracking({ fbPixelId, gtmId }: { fbPixelId?: string, gtmId?: string }) {
   // Ưu tiên dùng ID truyền từ props (từ CMS Sanity theo từng xe).
-  // Nếu không có, dùng mặc định của biến môi trường.
-  const pixel = fbPixelId || process.env.NEXT_PUBLIC_FB_PIXEL_ID;
+  // Nếu không có, dùng mặc định của biến môi trường hoặc Pixel ID mặc định 1739247260326303.
+  const pixel = fbPixelId || process.env.NEXT_PUBLIC_FB_PIXEL_ID || '1739247260326303';
   const tagManager = gtmId || process.env.NEXT_PUBLIC_GTM_ID;
 
   return (

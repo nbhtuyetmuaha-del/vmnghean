@@ -62,6 +62,19 @@ export default function ContactModal({ consultant, carSlug }: ContactModalProps)
     setIsSubmitting(false);
 
     if (res.success) {
+      // Bắn sự kiện Facebook Pixel Lead nếu có Pixel
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+      }
+
+      // Bắn sự kiện Google Tag Manager / GA4 Lead
+      if (typeof window !== 'undefined' && (window as any).dataLayer) {
+        (window as any).dataLayer.push({
+          event: 'generate_lead',
+          form_name: 'Lead Consultation Form'
+        });
+      }
+
       // Tự động đóng sau 3 giây nếu thành công
       setTimeout(() => {
         closeModal();
